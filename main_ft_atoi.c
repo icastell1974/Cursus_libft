@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 08:26:06 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/12 18:01:15 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/14 18:28:56 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,17 @@ int ft_atoi(const char *str)
 	{
 		numero = numero * 10 + aux[i] - '0';
 		i++;
+		if (numero > 2147483647)
+			return (-1);
+		if (numero < -2147483648)
+			return (0);
 	}
 	return (numero * negativo);
 }
 
 int main()
 {
-	char	str[40] = "\t\v\f\r\n \f+\t\v\f\r\n \f1234"; //"+\t\v\f\r\n \f1234";
+	char	str[40] = "\t\v\f\r\n \f+\t\v\f\r\n \f1234"; //"-9999999999999999999999999"; //"\t\v\f\r\n \f+\t\v\f\r\n \f1234"; //"+\t\v\f\r\n \f1234";
 
 	printf("string original: %s\n", str);
 	printf("atoi original: %d\n", atoi(str));

@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:10:09 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/13 19:41:55 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/14 17:51:38 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
 void    *ft_memset(void *ptr, int x, size_t n);
 void    ft_bzero(void *ptr, size_t n);
 void    *ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memchr(const void *str, int c, size_t n);
+int     ft_memcmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlen(char *str);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
