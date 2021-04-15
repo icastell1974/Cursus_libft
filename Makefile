@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/04/14 17:52:01 by icastell         ###   ########.fr        #
+#    Updated: 2021/04/15 11:46:31 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS =	ft_memset.c\
 		ft_isprint.c\
 		ft_toupper.c\
 		ft_tolower.c\
+		ft_calloc.c\
 
 OBJS = $(SRCS:.c=.o)
 
