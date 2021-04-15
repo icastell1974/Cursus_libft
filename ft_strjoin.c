@@ -6,11 +6,11 @@
 /*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 16:29:43 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/15 18:31:19 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/15 19:03:42 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*ft_substr() reserva memoria (con malloc) y devuelve la cadena de caracteres
+/*ft_strjoin() reserva memoria (con malloc) y devuelve la cadena de caracteres
 que resulta de la concatenación de s1 y s2. Si la reserva de memoria falla
 devuelve NULL.*/
 
@@ -23,7 +23,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	long2;
 	char	*str;
 
-	
 	if ((!s1) || (!s2))
 		return (NULL);
 	i = 0;
