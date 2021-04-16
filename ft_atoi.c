@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 14:00:34 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/14 19:03:48 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/16 12:53:58 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ pointed to by str to int representation.*/
 
 int	ft_atoi(const char *str)
 {
-	int	i;
+	int		i;
 	long	numero;
-	int	negativo;
+	int		negativo;
 
 	i = 0;
 	numero = 0;
