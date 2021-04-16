@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/04/15 17:04:22 by icastell         ###   ########.fr        #
+#    Updated: 2021/04/16 09:10:48 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS =	ft_memset.c\
 		ft_strdup.c\
 		ft_substr.c\
 		ft_strjoin.c\
+		ft_strtrim.c\
 
 OBJS = $(SRCS:.c=.o)
 
@@ -51,7 +52,7 @@ $(OBJS): $(SRCS)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-test:	re
+test:
 		gcc -g -I. main.c libft.a -o a.out
 		./a.out
 clean:

@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 16:29:43 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/15 19:03:42 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/16 10:14:43 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	long1 = ft_strlen((char *)s1);
 	long2 = ft_strlen((char *)s2);
-	str = malloc(long1 + long2 + 1);
+	str = ft_calloc(long1 + long2 + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s1[i] != '\0')
