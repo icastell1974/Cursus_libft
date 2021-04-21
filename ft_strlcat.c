@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:26:54 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/21 17:06:32 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/21 17:13:11 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ src. If the return value is >= size, the output string has been truncated.*/
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -30,13 +30,13 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	i = ft_strlen(dest);
 	r = ft_strlen(src);
 	j = 0;
-	if (size == 0)
+	if (dstsize == 0)
 		return (r);
-	if (size < i)
-		return (r + size);
+	if (dstsize < i)
+		return (r + dstsize);
 	else
 		r = r + i;
-	while (src[j] != '\0' && i < size - 1 && dest != src)
+	while (src[j] != '\0' && i < dstsize - 1 && dest != src)
 	{
 		dest[i] = src[j];
 		j++;
