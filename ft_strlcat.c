@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:26:54 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/09 10:26:16 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/21 17:06:32 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	if (size == 0)
 		return (r);
 	if (size < i)
-		r = r + size;
+		return (r + size);
 	else
 		r = r + i;
 	while (src[j] != '\0' && i < size - 1 && dest != src)
