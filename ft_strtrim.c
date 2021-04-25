@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 19:02:01 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/16 09:37:10 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/22 16:52:46 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,14 @@ devuelve NULL.*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	index1;
-	size_t	index2;
-	char	*ptr;
+	size_t	len;
 
-	i = 0;
-	if ((!s1) || (!set))
+	if (!s1 || !set)
 		return (NULL);
-	while (ft_memchr(set, s1[i], ft_strlen((char *)set)) != NULL)
-		i++;
-	index1 = i++;
-	i = ft_strlen((char *)s1);
-	while (ft_memchr(set, s1[i - 1], ft_strlen((char *)set)) != NULL)
-		i--;
-	index2 = i;
-	if (index1 < index2)
-		ptr = ft_substr(s1, index1, index2 - index1);
-	else
-		ptr = ft_substr(s1, index1, 1);
-	return (ptr);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen((char *)s1);
+	while (len && ft_strchr(set, s1[len]))
+		len--;
+	return (ft_substr(s1, 0, len + 1));
 }

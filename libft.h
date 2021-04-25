@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:10:09 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/21 16:33:29 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/23 20:28:00 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void    ft_putchar_fd(char c, int fd);

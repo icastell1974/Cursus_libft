@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 17:55:04 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/20 18:13:28 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/23 18:51:26 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ string. Each digit occupies one position in the string.*/
 
 #include "libft.h"
 
-char	ft_getdigit(long int n)
+static char	ft_getdigit(long int n)
 {
 	size_t	digit;
 
@@ -23,7 +23,7 @@ char	ft_getdigit(long int n)
 	return (digit + '0');
 }
 
-void	ft_strset(char *str, size_t len, int n)
+static void	ft_strset(char *str, size_t len, int n)
 {
 	size_t		i;
 	long int	nb;
@@ -49,7 +49,7 @@ void	ft_strset(char *str, size_t len, int n)
 	return ;
 }
 
-size_t	ft_lenint(int n)
+static size_t	ft_lenint(int n)
 {
 	size_t		i;
 	long int	nb;

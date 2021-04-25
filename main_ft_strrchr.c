@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_ft_strrchr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 08:44:07 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/08 12:06:09 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/22 17:39:20 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*ft_strrchr(const char *str, int c)
 
 int	main()
 {
-	char	src[30] = "Hol crcol uuidfuua";
-	char	to_find = '\0';
+	char	src[30] = "123456789"; //"Hol crcol uuidfuua";
+	char	to_find = 'a'; //'\0';
 	char	*temp;
 	char	*temp_original;
 

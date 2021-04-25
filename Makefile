@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/04/21 16:33:46 by icastell         ###   ########.fr        #
+#    Updated: 2021/04/23 20:28:19 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS =	ft_memset.c\
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
+		ft_split.c\
 		ft_itoa.c\
 		ft_strmapi.c\
 		ft_putchar_fd.c\
