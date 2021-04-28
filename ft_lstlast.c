@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 20:19:01 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/27 17:33:55 by icastell         ###   ########.fr       */
+/*   Created: 2021/04/26 18:57:48 by icastell          #+#    #+#             */
+/*   Updated: 2021/04/26 19:22:06 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*ft_lstsize() cuenta el número de elementos de una lista. 'lst' apunta
-al principio de la lista.*/
+/*ft_listlast() devuelve el último elemento de la lista. 'lst' apunta al
+principio de la lista.*/
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (lst)
-	{
-		i++;
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
 		lst = lst -> next;
-	}
-	return (i);
+	return (lst);
 }

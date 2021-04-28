@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 14:19:14 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/16 09:34:01 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/28 18:54:55 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,20 @@ tiene como tamaño máximo len. Si la reserva de memoria falla devuelve NULL.*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	size_t	longitud;
 	char	*str;
 
 	i = 0;
+	if (!s)
+		return (NULL);
+	longitud = ft_strlen((char *)s);
+	if (start >= longitud)
+		return (ft_calloc(1, sizeof(char)));
+	if ((len + start) > longitud)
+		len = longitud - start;
 	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	if (!s)
-		return (str);
-	if (start >= ft_strlen((char *)s))
-		return (str);
 	while (i < len)
 	{
 		str[i] = s[start + i];

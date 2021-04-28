@@ -6,7 +6,7 @@
 #    By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/04/25 20:24:06 by icastell         ###   ########.fr        #
+#    Updated: 2021/04/27 19:30:06 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,14 @@ SRCS =	ft_memset.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 		ft_lstnew.c\
+		ft_lstadd_front.c\
 		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstclear.c\
+		ft_lstiter.c\
+		ft_lstmap.c\
 
 OBJS = $(SRCS:.c=.o)
 

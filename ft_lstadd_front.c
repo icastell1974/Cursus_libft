@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 20:19:01 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/27 17:33:55 by icastell         ###   ########.fr       */
+/*   Created: 2021/04/26 18:30:50 by icastell          #+#    #+#             */
+/*   Updated: 2021/04/26 18:55:11 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*ft_lstsize() cuenta el número de elementos de una lista. 'lst' apunta
-al principio de la lista.*/
+/*ft_lstadd_front() añade el elemento 'new' al principio de la lista.
+**alst: dirección del puntero al primer elemento de la lista
+*new:   dirección del punntero al elemento que hay que añadir a la lista.*/
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (lst)
+	if (new)
 	{
-		i++;
-		lst = lst -> next;
+		if (alst)
+		{
+			new -> next = *alst;
+			*alst = new;
+		}
 	}
-	return (i);
+	return ;
 }

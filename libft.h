@@ -6,7 +6,7 @@
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 20:10:09 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/25 20:23:51 by icastell         ###   ########.fr       */
+/*   Updated: 2021/04/27 19:29:52 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,13 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

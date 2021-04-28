@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/25 20:19:01 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/27 17:33:55 by icastell         ###   ########.fr       */
+/*   Created: 2021/04/27 18:40:51 by icastell          #+#    #+#             */
+/*   Updated: 2021/04/27 18:50:41 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*ft_lstsize() cuenta el número de elementos de una lista. 'lst' apunta
-al principio de la lista.*/
+/*ft_lstiter() realiza una iteración sobre la lista 'lst' y aplica
+la función 'f' al contenido de cada elemento.
+*lst:	dirección del puntero a un elemento
+*f:		dirección de la función que hay que aplicar.*/
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
+	t_list	*nodo;
 
-	i = 0;
-	while (lst)
+	if (lst)
 	{
-		i++;
-		lst = lst -> next;
+		nodo = lst;
+		if (f)
+		{
+			while (nodo)
+			{
+				f(nodo -> content);
+				nodo = nodo -> next;
+			}
+		}
 	}
-	return (i);
+	return ;
 }
