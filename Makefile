@@ -6,13 +6,13 @@
 #    By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/09 12:10:34 by icastell          #+#    #+#              #
-#    Updated: 2021/04/27 19:30:06 by icastell         ###   ########.fr        #
+#    Updated: 2021/05/03 11:49:00 by icastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FLAGS = -Wall -Werror -Wextra -g
+FLAGS = -Wall -Werror -Wextra
 
 SRCS =	ft_memset.c\
 		ft_bzero.c\
@@ -48,35 +48,43 @@ SRCS =	ft_memset.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
-		ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstsize.c\
-		ft_lstlast.c\
-		ft_lstadd_back.c\
-		ft_lstdelone.c\
-		ft_lstclear.c\
-		ft_lstiter.c\
-		ft_lstmap.c\
 
-OBJS = $(SRCS:.c=.o)
+SRCS_BONUS =	ft_lstnew.c\
+				ft_lstadd_front.c\
+				ft_lstsize.c\
+				ft_lstlast.c\
+				ft_lstadd_back.c\
+				ft_lstdelone.c\
+				ft_lstclear.c\
+				ft_lstiter.c\
+				ft_lstmap.c\
 
-all: $(NAME)
+OBJS =	$(SRCS:.c=.o)
 
-$(OBJS): $(SRCS)
-	gcc $(FLAGS) -c $(SRCS)
+OBJS_BONUS =	$(SRCS_BONUS:.c=.o)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME):	$(OBJS)
+			ar rcs $(NAME) $(OBJS)
+
+$(OBJS):	$(SRCS)
+			gcc $(FLAGS) -c $(SRCS)
 
 test:
 		gcc -g -I. main.c libft.a -o a.out
 		./a.out
+
+all:	$(NAME)
+
+bonus:	$(OBJS) $(OBJS_BONUS)
+		ar rcs $(NAME) $(OBJS_BONUS) $(OBJS_BONUS)
+
 clean:
-	rm -f $(OBJS)
+		rm -f $(OBJS)
+		rm -f $(OBJS_BONUS)
 
 fclean:	clean
-	rm -f $(NAME)
+		rm -f $(NAME)
 
-re: fclean all
+re:		fclean all
 
 .PHONY:	all clean fclean re
