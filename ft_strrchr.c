@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: icastell <icastell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: icastell <icastell@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 10:53:53 by icastell          #+#    #+#             */
-/*   Updated: 2021/04/09 10:15:01 by icastell         ###   ########.fr       */
+/*   Updated: 2021/05/03 10:12:07 by icastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *str, int c)
 	aux_2 = NULL;
 	while (aux[i] != '\0')
 	{
-		if (aux[i] == c)
+		if (aux[i] == (char)c)
 			aux_2 = &aux[i];
 		i++;
 	}
